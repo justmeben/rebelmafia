@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rebel Mafia</title>
-</head>
-<body>
-Yo yo yo
-{{ rabbit }}
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Leagues</h1>
+
+    <a href="/leagues/1" class="league-card">
+        <div class="league-card-name">Rebel Mafia</div>
+        <div class="league-card-desc">Some mafia thing not to worry about</div>
+    </a>
+
+{% endblock %}
