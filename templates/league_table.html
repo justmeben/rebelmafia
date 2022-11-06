@@ -10,6 +10,7 @@
                 <td>Bonus</td>
                 <td>+</td>
                 <td>-</td>
+                <td>Winrate</td>
                 <td>Wins</td>
                 <td>Losses</td>
                 <td>Games</td>
@@ -19,10 +20,11 @@
             <tr>
                 <td>{{ player.position }}</td>
                 <td>{{ player.nickname }} </td>
-                <td>{{ player.total_points }} </td>
-                <td>{{ player.total_extra_points }}</td>
-                <td>{{ player.total_plus_points }} </td>
-                <td>{{ player.total_minus_points }} </td>
+                <td>{{ player.total_points|floatformat:2 }} </td>
+                <td>{{ player.total_extra_points|floatformat:2 }}</td>
+                <td>{{ player.total_plus_points|floatformat:2 }} </td>
+                <td>{{ player.total_minus_points|floatformat:2 }} </td>
+                <td>{{ player.winrate|floatformat:2 }}%</td>
                 <td>{{ player.wins }}</td>
                 <td>{{ player.losses }}</td>
                 <td>{{ player.total_games }}</td>
