@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>{{ league.name }}</h1>
-    <a class="menu-link" href="/league/{{ league.id }}"> Info</a>
-    <a class="menu-link" href="/league/{{ league.id }}/games"> Games</a>
-    <a class="menu-link" href="/league/{{ league.id }}/table"> Ranking</a>
-    <br />
-    <br />
-    <br />
+    <div class="sub-nav">
+        <a class="menu-link" href="/league/{{ league.id }}"> Info</a>
+        <a class="menu-link" href="/league/{{ league.id }}/games"> Games</a>
+        <a class="menu-link" href="/league/{{ league.id }}/table"> Ranking</a>
+    </div>
+    <h1>{{ league.name }} {% block title_extra %}{% endblock %}</h1>
     {% block inner_content %}
     {% endblock %}
 {% endblock %}

@@ -1,11 +1,9 @@
 {% extends "base__league.html" %}
-
+{% block title_extra %} - Ranking{% endblock %}
 {% block inner_content %}
-    <div class="section-card">
-        <h2 style="margin-top: 0;">Ranking</h2>
         <div style="overflow-x: scroll">
         <table>
-            <tr>
+            <tr style="color: #ee4343; font-weight: bolder">
                 <td>#</td>
                 <td>Nickname</td>
                 <td>Score</td>
@@ -31,6 +29,5 @@
             </tr>
         {% endfor %}
         </table>
-        </div>
     </div>
 {% endblock %}
