@@ -3,9 +3,11 @@
 {% block content %}
     <h1>Leagues</h1>
 
-    <a href="/leagues/1" class="league-card">
-        <div class="league-card-name">Rebel Mafia</div>
-        <div class="league-card-desc">Some mafia thing not to worry about</div>
+    {% for league in leagues %}
+    <a href="/league/{{ league.id }}" class="league-card">
+        <div class="league-card-name">{{ league.name }}</div>
+        <div class="league-card-desc">{{ league.description }}</div>
     </a>
+    {% endfor %}
 
 {% endblock %}

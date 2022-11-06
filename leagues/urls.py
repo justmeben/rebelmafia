@@ -19,5 +19,8 @@ from django.urls import path, include
 from leagues import views
 
 urlpatterns = [
-    path('', views.HomeView.as_view())
+    path('', views.HomeView.as_view()),
+    path('league/<int:league_id>', views.LeagueView.as_view()),
+    path('league/<int:league_id>/games', views.LeagueGamesView.as_view()),
+    path('league/<int:league_id>/table', views.LeagueTableView.as_view())
 ]

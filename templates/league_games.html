@@ -1,0 +1,21 @@
+{% extends "base__league.html" %}
+
+{% block inner_content %}
+    <div class="section-card">
+        <h2 style="margin-top: 0;">Games</h2>
+        {% for game in games %}
+            <div style="padding: 10px; margin-bottom: 10px; border-radius: 5px;
+                    background: {% if game.did_citizen_win %}#d55f5f{% else %}#333{% endif %}">
+                <h3 style="margin-bottom: 10px; margin-top: 0">Game #{{ game.number }}
+                 | {% if game.did_citizen_win %}Citizen{% else %}Mafia{% endif %} Win</h3>
+
+                {% for result in game.results %}
+                    <div style="padding: 5px">
+                       #{{ result.player_position }} | {{ result.player_role }} |
+                        {{ result.win_score }}/{{ result.extra_score }} | {{ result.player.nickname }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

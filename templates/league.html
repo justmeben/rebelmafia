@@ -1,0 +1,17 @@
+{% extends "base__league.html" %}
+
+{% block inner_content %}
+    <div class="section-card">
+        <h2 style="margin-top: 0;">About</h2>
+        <div style="padding: 5px;">{{ league.description }}</div>
+    </div>
+    <br />
+    <div class="section-card">
+        <h2 style="margin-top: 0;">Players</h2>
+        {% for player in players %}
+            <div class="player">
+                {{ player.nickname }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

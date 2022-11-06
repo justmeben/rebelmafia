@@ -34,6 +34,8 @@ class Result(models.Model):
     did_win = models.BooleanField(null=False, blank=False)
     win_score = models.FloatField(null=False, blank=False, default=0)
     extra_score = models.FloatField(null=False, blank=False, default=0)
+    plus_score = models.FloatField(null=False, blank=False, default=0)
+    minus_score = models.FloatField(null=False, blank=False, default=0)
     player_position = models.IntegerField(null=False, blank=False)
     comments = models.TextField(null=True, blank=True)
 

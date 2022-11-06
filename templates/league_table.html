@@ -1,0 +1,36 @@
+{% extends "base__league.html" %}
+
+{% block inner_content %}
+    <div class="section-card">
+        <h2 style="margin-top: 0;">Ranking</h2>
+        <div style="overflow-x: scroll">
+        <table>
+            <tr>
+                <td>#</td>
+                <td>Nickname</td>
+                <td>Score</td>
+                <td>Bonus</td>
+                <td>+</td>
+                <td>-</td>
+                <td>Wins</td>
+                <td>Losses</td>
+                <td>Games</td>
+
+            </tr>
+        {% for player in ranking_table %}
+            <tr>
+                <td>{{ player.position }}</td>
+                <td>{{ player.nickname }} </td>
+                <td>{{ player.total_points }} </td>
+                <td>{{ player.total_extra_points }}</td>
+                <td>{{ player.total_plus_points }} </td>
+                <td>{{ player.total_minus_points }} </td>
+                <td>{{ player.wins }}</td>
+                <td>{{ player.losses }}</td>
+                <td>{{ player.total_games }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        </div>
+    </div>
+{% endblock %}
