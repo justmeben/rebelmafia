@@ -3,7 +3,7 @@
 {% block inner_content %}
         {% for game in games %}
             <div style="padding: 10px; margin-bottom: 10px; border-radius: 5px;
-                    background: {% if game.did_citizen_win %}#d55f5f{% else %}#333{% endif %}">
+                    background: {% if game.did_citizen_win %}#ee4343{% else %}#333{% endif %}">
                 <h3 style="margin-bottom: 10px; margin-top: 0">Game #{{ game.number }}
                  | {% if game.did_citizen_win %}Citizen{% else %}Mafia{% endif %} Win</h3>
 
