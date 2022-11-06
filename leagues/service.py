@@ -20,7 +20,7 @@ def get_league_ranking_table(league: League) -> List:
         else:
             players_data[result.player_id]['losses'] += 1
         players_data[result.player_id]['total_games'] += 1
-        players_data[result.player_id]['winrate'] = players_data[result.player_id]['wins'] / players_data[result.player_id]['total_games']
+        players_data[result.player_id]['winrate'] = 100 * players_data[result.player_id]['wins'] / players_data[result.player_id]['total_games']
 
     ranking_table = sorted(players_data.values(), key=lambda x: x.get('total_points', -1), reverse=True)
     for i in range(len(ranking_table)):
